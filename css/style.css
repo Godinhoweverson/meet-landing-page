@@ -45,6 +45,13 @@ h1 {
     font-weight:900;
 }
 
+h2{
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: 900;
+    text-align: center;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -110,6 +117,7 @@ header {
     text-align: center;
 }
 
+/* General button styles */
 .btn-container {
     display: flex;
     flex-direction: row;
@@ -117,37 +125,51 @@ header {
     height: 58px;
 }
 
-.download button {
-    background-color: var(--green-light);
+.download{
+    padding-right: 16px;
+}
+
+.btn-download, .what button, .btn-footer button {
     width: 193px;
     height: 58px;
     border-radius: 35px;
-    margin-right: 16px;
+    cursor: pointer;
 }
 
-.download button:hover{
-    background-color:var(--green-btn-hover);
+.download button {
+    background-color: var(--green-light); /* Background color for the button in the header section */
+}
+
+.download button:hover {
+    background-color: var(--green-btn-hover);
 }
 
 .what button {
     background-color: var(--purple-dark);
     width: 139px;
-    height: 58px;
-    border-radius: 35px;
 }
 
-.what button:hover{
-    background-color:var(--purple-light);
+.what button:hover, .btn-footer button:hover {
+    background-color: var(--purple-light); /* The hover method is applied to both the btn-what and btn-footer buttons */
 }
 
-.download-text, .what-text{
+.btn-footer {
+    width: 193px;
+}
+
+.btn-footer button {
+    background-color: var(--purple-dark);
+}
+
+/* Text colors */
+.download-text, .what-text, .version-text-purple {
     color: var(--white);
- 
 }
-.version-text{
-    color: var(--blue-light);
 
+.version-text {
+    color: var(--blue-light);
 }
+
 /* 
 section container images */
 #container-images{
@@ -177,6 +199,7 @@ line{
     height: 56px;
     border: 0.5px solid #87879d;
     border-radius: 50%;
+    background-color: var(--white);
 }
 
 .number p{
@@ -206,29 +229,95 @@ line{
     border-radius: 5%;
 }
 
+#smarter-meetings-container {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items: center;
+    width: 1110px;
+    height: 532px;
+}
 
+.smarter-meeting-sub-contaneir{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    width: 540px;
+    height: 452px;
+    position: relative;
+}
 
-#smater-meetings {
-    padding: 20px;
+.text-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 240px;
+    margin-bottom: 72px;
+}
+
+.upper-case{
+    color: var(--green-light);
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 26px;
+    word-spacing: 4px;
     text-align: center;
+}
+
+.lower-case{
+    text-align: center;
+    font-weight: 600;
+    line-height: 26px;
+    padding: 0 38px 0 38px;
+}
+
+.circle-number-two {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 212px;
+    width: 56px;
+    position: absolute; 
+    z-index: 2;
+    bottom: -28px; 
 }
 
 footer {
-    text-align: center;
-    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1440px;
+    height: 308px;
+    position: relative; /* ou absolute, se necessário */
+    z-index: 1;
+    background-image:         
+    linear-gradient(rgba(77, 150, 168, 0.9), rgba(77, 150, 168, 0.9)), 
+    url('../assets/desktop/image-footer.jpg');
+    background-size:cover;
+    background-position: center;
 }
 
-footer .experience {
-    margin-bottom: 20px;
+.footer-subcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 1110px;
+    height: 88px;
 }
 
-footer .text {
-    margin-bottom: 20px;
+.experience{
+    color: var(--white);
+    width: 350px;
+
+}
+.text-footer{
+    padding: 0 25px 0 25px;
+    width: 350px ;
 }
 
-footer .btn button {
-    background-color: var(--green-light);
-    width: 193px;
-    height: 58px;
-    border-radius: 35px;
+.text-footer p{
+color: var(--white);
 }
+
