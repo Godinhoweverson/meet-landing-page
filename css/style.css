@@ -25,6 +25,7 @@ body {
     min-height: 1815px;
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
+    background-color: var(--white);
 }
 
 /* This class sets the  font size, font-weight and line-height for both paragraphs and buttons */
